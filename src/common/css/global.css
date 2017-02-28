@@ -1,0 +1,34 @@
+.content a:not(.button):visited {
+  color: #3c81df;
+}
+
+.content a:not(.button) {
+  border-bottom: none;
+}
+
+.twemoji {
+  width: 20px;
+  vertical-align: top;
+}
+
+.pagination {
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #363636;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.u-relation .title{
+  font-size: 20px;
+}
+
+.u-relation .title a:hover{
+  border-bottom: none;
+}
