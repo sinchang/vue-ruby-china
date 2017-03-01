@@ -39,7 +39,7 @@
 
   .app-body {
     min-height: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
   }
 
   .image.is-64x64 {
