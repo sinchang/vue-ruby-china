@@ -69,12 +69,13 @@
     methods: {
       reply() {
         util.fetch({
-          url: util.APIURL + 'topics/' + this.params.id + 'replies',
-          params: {
+          url: util.APIURL + 'topics/' + this.$route.params.id + '/replies',
+          method: 'POST',
+          data: {
             body: this.output
           },
           successCallback: (res) => {
-            console.log(res);
+            window.location.reload();
           }
         })
       },
