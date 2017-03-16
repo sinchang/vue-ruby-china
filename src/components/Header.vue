@@ -54,8 +54,8 @@
       }
     },
     mounted() {
-      this.loginName = util.getLocalStorage('fe_vue') && util.getLocalStorage('fe_vue').loginName;
-      this.avatar_url = util.getLocalStorage('fe_vue') && util.getLocalStorage('fe_vue').avatar_url;
+      this.loginName = util.readCookie('fe_token') && util.getLocalStorage('fe_vue') && util.getLocalStorage('fe_vue').loginName;
+      this.avatar_url = util.readCookie('fe_token') && util.getLocalStorage('fe_vue') && util.getLocalStorage('fe_vue').avatar_url;
     },
     methods: {
       toggle() {

@@ -30,9 +30,6 @@
         password: '',
       }
     },
-    mounted() {
-      if (!util.getLocalStorage('fe_vue') && util.readCookie('fe_token')) this.fetchUserData()
-    },
     methods: {
       hide() {
         this.$parent.loginVisible = false;

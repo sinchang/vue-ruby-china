@@ -50,21 +50,18 @@
           }
         });
 
-        var fe_vue = util.getLocalStorage('fe_vue');
-        if (fe_vue) {
-          if (fe_vue.nodes) {
-            this.nodes = fe_vue.nodes;
-            return;
-          }
+       var fe_vue = util.readCookie('fe_token') ? util.getLocalStorage('fe_vue') : {};
+       if (fe_vue.nodes) {
+          this.nodes = fe_vue.nodes;
+          return;
         }
 
         util.fetch({
           url: util.APIURL + 'nodes',
           successCallback: (res) => {
             this.nodes = res.data.nodes;
-            let storage = fe_vue || {};
-            storage.nodes = this.nodes;
-            util.setLocalStorage('fe_vue', storage);
+            fe_vue.nodes = this.nodes;
+            util.setLocalStorage('fe_vue', fe_vue);
           }
         })
 

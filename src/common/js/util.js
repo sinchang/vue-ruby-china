@@ -31,7 +31,7 @@ const util = {
         options.successCallback && options.successCallback(res);
       })
       .catch((error) => {
-        console.log(error);
+        alert(error.response.data.error_description);
       });
   },
   getUrlParam(name, url) {
